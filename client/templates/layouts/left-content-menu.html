@@ -1,0 +1,13 @@
+<template name="leftContentMenu">
+<div class="template-home">
+    <div class="page-header">
+      <h3>{{title}}</h3>
+      <div class="pull-right">
+        <button class="btn btn-danger" data-event="close-left-menu"><i class="fa fa-close fa-fw"></i></button>
+      </div>
+    </div>
+    <div>
+      {{> Template.dynamic template=dynamicTemplate}}
+    </div>
+  </div>
+</template>
