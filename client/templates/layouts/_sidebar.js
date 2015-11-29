@@ -3,7 +3,9 @@ Template._sidebar.onRendered(function() {
 });
 
 Template._sidebar.helpers({
-
+  userId: function() {
+    return Meteor.userId();
+  }
 });
 
 Template._sidebar.events({
