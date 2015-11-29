@@ -29,21 +29,22 @@ Template.mainMap.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
   GoogleMaps.ready('kosiceMap', function(map) {
     // Add a marker to the map once it's ready
-    var marker1 = new google.maps.Marker({
-      position: new google.maps.LatLng(48.6190494,21.2869908),
+    var marker1 = [
+    new google.maps.Marker({
+      position: new google.maps.LatLng(48.7263837,21.247982),
       map: map.instance,
       icon: "/img/markers/basketball.png"
-    });
-    var marker2 = new google.maps.Marker({
-      position: new google.maps.LatLng(48.6490494,21.3869908),
+    }),
+    new google.maps.Marker({
+      position: new google.maps.LatLng(48.715327,21.2459155),
       map: map.instance,
       icon: "/img/markers/soccer.png"
-    });
-    var marker3 = new google.maps.Marker({
-      position: new google.maps.LatLng(48.4190494,22.2869908),
+    }),
+    new google.maps.Marker({
+      position: new google.maps.LatLng(48.6970366,21.2432349),
       map: map.instance,
       icon: "/img/markers/volleyball.png"
-    });
+    })];
   });
 });
 
