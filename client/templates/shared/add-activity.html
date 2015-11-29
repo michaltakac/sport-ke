@@ -7,7 +7,8 @@
         <h4>Pridať aktivitu</h4>
       </div>
       <div class="box-body big">
-        <form class="form-horizontal" role="form">
+        {{#if currentUser}}
+        <form class="form-horizontal" role="form" id"add-activity">
           <div class="form-group">
             <label class="col-sm-3 control-label">Vyber šport</label>
             <div class="col-sm-9">
@@ -56,7 +57,14 @@
               <button type="submit" class="btn btn-primary">Vytvoriť udalosť</button>
             </div>
           </div>
-         </form>
+        </form>
+        {{else}}
+          <div class="alert alert-danger" role="alert">
+            Ak chcete pridať novú športovú udalosť, musíte byť <strong>prihlásený</strong>!
+
+            <a href="/prihlasenie" class="btn btn-primary">Prihlásenie</a>
+          </div>
+        {{/if}}
       </div>
     </div>
   </div>
