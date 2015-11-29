@@ -16,5 +16,14 @@ Template._sidebar.events({
       $('#sidebar').addClass('open-menu');
       $('#main-content').removeClass('margin-left-50');
     }
+  },
+  'click #logout': function(e) {
+    Meteor.logout(function(error){
+      if(error){
+        alert(error.reason);
+      } else {
+        FlowRouter.go('/')
+      }
+    });
   }
 });

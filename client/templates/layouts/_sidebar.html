@@ -26,15 +26,17 @@
           </a>
         </li>
         <li>
-          <a href="/friends/{{userId}}">
-          <i class="fa fa-group fa-fw"></i> <span class="menu-text">Priatelia</span>
-          </a>
-        </li>
-        <li>
-          <a href="/settings">
+          <a href="#">
           <i class="fa fa-gears fa-fw"></i> <span class="menu-text">Nastavenia</span>
           </a>
         </li>
+        <!--{{#if currentUser}}-->
+        <li>
+          <a href="#" id="logout">
+          <i class="fa fa-power-off fa-fw"></i> <span class="menu-text">Odhlásenie</span>
+          </a>
+        </li>
+        <!--{{/if}}-->
       </ul>
       <!-- /SIDEBAR MENU -->
     </div>
