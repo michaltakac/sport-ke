@@ -5,41 +5,40 @@
       <!-- SIDEBAR MENU -->
       <ul>
         <li>
-          <a href="/">
-          <i class="fa fa-home fa-fw"></i> <span class="menu-text">Domov</span>
+          <a href="/" data-open="addActivity" data-toggle="tooltip" data-placement="right" title="Domov">
+          <i class="fa fa-home fa-fw"></i>
           </a>
         </li>
         <li class="active">
-          <a href="#" id="open-menu" data-open="addActivity">
-          <i class="fa fa-plus-circle fa-fw"></i> <span class="menu-text">Pridať aktivitu</span>
-          <span class="selected"></span>
+          <a href="#" id="open-menu" data-open="addActivity" data-toggle="tooltip" data-placement="right" title="Pridať aktivitu">
+          <i class="fa fa-plus-circle fa-fw"></i>
           </a>
         </li>
         <li>
-          <a href="#" id="open-menu" data-open="activityFeed">
-          <i class="fa fa-rss fa-fw"></i> <span class="menu-text">Zoznam aktivít</span>
+          <a href="#" id="open-menu" data-open="activityFeed" data-toggle="tooltip" data-placement="right" title="Zoznam aktivít">
+          <i class="fa fa-rss fa-fw"></i>
           </a>
         </li>
         <li>
-          <a href="#">
-          <i class="fa fa-gears fa-fw"></i> <span class="menu-text">Nastavenia</span>
+          <a href="#" data-toggle="tooltip" data-placement="right" title="Nastavenia">
+          <i class="fa fa-gears fa-fw"></i>
           </a>
         </li>
         {{#if currentUser}}
-        <li>
+        <li data-toggle="tooltip" data-placement="right" title="Profil">
           <a href="/profil/{{userId}}">
-          <i class="fa fa-user fa-fw"></i> <span class="menu-text">Profil</span>
+          <i class="fa fa-user fa-fw"></i>
           </a>
         </li>
-        <li>
+        <li data-toggle="tooltip" data-placement="right" title="Odhlásenie">
           <a href="#" id="logout">
-          <i class="fa fa-power-off fa-fw"></i> <span class="menu-text">Odhlásenie</span>
+          <i class="fa fa-power-off fa-fw"></i>
           </a>
         </li>
         {{else}}
-        <li>
+        <li data-toggle="tooltip" data-placement="right" title="Prihlásenie">
           <a href="/prihlasenie">
-          <i class="fa fa-sign-in fa-fw"></i> <span class="menu-text">Prihlásenie</span>
+          <i class="fa fa-sign-in fa-fw"></i>
           </a>
         </li>
         {{/if}}

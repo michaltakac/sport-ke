@@ -1,5 +1,5 @@
 Template._sidebar.onRendered(function() {
-
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 Template._sidebar.helpers({
@@ -16,6 +16,7 @@ Template._sidebar.events({
     var $sidebar = $('#sidebar');
     if ($sidebar.attr("class") === 'sidebar mini-menu') {
       $('#sidebar').addClass('open-menu');
+      $('#left-content-menu').addClass('open-menu');
       $('#main-content').removeClass('margin-left-50');
     }
   },
