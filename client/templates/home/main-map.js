@@ -1,4 +1,4 @@
-var styles = [
+mapStyles = [
   {
     stylers: [
       { invert_lightness: true },
@@ -10,26 +10,33 @@ var styles = [
   }
 ];
 
-Template.mainMap.onCreated(function() {
-  // We can use the `ready` callback to interact with the map API once the map is ready.
+Template.mainMap.onRendered(function() {
+  var self = this;
+
   GoogleMaps.ready('kosiceMap', function(map) {
-    // Add a marker to the map once it's ready
-    var marker1 = [
-    new google.maps.Marker({
-      position: new google.maps.LatLng(48.7263837,21.247982),
-      map: map.instance,
-      icon: "/img/markers/basketball.png"
-    }),
-    new google.maps.Marker({
-      position: new google.maps.LatLng(48.715327,21.2459155),
-      map: map.instance,
-      icon: "/img/markers/soccer.png"
-    }),
-    new google.maps.Marker({
-      position: new google.maps.LatLng(48.6970366,21.2432349),
-      map: map.instance,
-      icon: "/img/markers/volleyball.png"
-    })];
+    var marker;
+
+    // Create and move the marker when latLng changes.
+    self.autorun(function() {
+      var subscription = self.subscribe('activity');
+      if (subscription.ready()) {
+        console.log("> Received ");
+        var events = Activity.find().fetch();
+        var array = events.map(function(event, i) {
+          return [
+            new google.maps.Marker({
+              position: new google.maps.LatLng(48.7190494,21.2569908),
+              map: map.instance,
+              icon: "/img/markers/soccer.png"
+            })
+          ]
+        });
+        marker = array;
+        console.log(marker);
+      } else {
+        console.log("> Subscription is not ready yet. \n\n");
+      }
+    });
   });
 });
 
@@ -42,8 +49,20 @@ Template.mainMap.helpers({
         center: new google.maps.LatLng(48.7190494,21.2569908),
         zoom: 13,
         minZoom: 12,
-        styles: styles
+        styles: mapStyles
       };
     }
   }
 });
+
+getLocation = function(address) {
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({'address': address}, function (results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      var latitude = results[0].geometry.location.lat();
+      var longitude = results[0].geometry.location.lng();
+      Session.set('address.lat', latitude);
+      Session.set('address.lon', longitude);
+    }
+  });
+};

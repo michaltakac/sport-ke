@@ -4,6 +4,8 @@
       <h4>Zoznam aktivít</h4>
     </div>
     <div class="box-body big">
+    {{#if Template.subscriptionsReady}}
+      {{#each activity}}
       <div class="event-item">
         <div class="panel panel-default">
           <div class="panel-body">
@@ -19,15 +21,15 @@
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-md-12 event-item-title">
-                        <h3>Podte von! Je teplo</h3>
+                        <h3>{{nazovUdalosti}}</h3>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-3">
-                        <p><i class="fa fa-calendar"></i>22.4.2016</p>
+                        <p><i class="fa fa-calendar"></i>{{classicTime eventDate}}</p>
                       </div>
                       <div class="col-md-3">
-                        <p><i class="fa fa-clock-o"></i>6:00 + 4h</p>
+                        <p><i class="fa fa-clock-o"></i>{{clockTime eventTime}}</p>
                       </div>
                       <div class="col-md-3">
                         <p><i class="fa fa-unlock"></i>Public</p>
@@ -39,7 +41,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6">
-                        <p><i class="fa fa-map-marker"></i>Hala Cassosport</p>
+                        <p><i class="fa fa-map-marker"></i>{{miestoKonania}}</p>
                       </div>
                       <div class="col-md-6">
                         <p><i class="fa fa-user"></i>Michal Makáč</p>
@@ -52,13 +54,13 @@
                 <div class="container-fluid">
                   <div class="row tools">
                     <div class="col-md-4">
-                      <a href="#"><i class="fa fa-users"></i>2/10</a>
+                      <a href="#"><i class="fa fa-users"></i>{{pocetOsob}}/10</a>
                     </div>
                     <div class="col-md-4">
-                      <a href="#"><i class="fa fa-caret-down"></i> More </a>
+                      <a href="#"><i class="fa fa-caret-down"></i> Viac </a>
                     </div>
                     <div class="col-md-4">
-                      <a href="#"><i class="fa fa-comments"></i>Comments</a>
+                      <a href="#"><i class="fa fa-comments"></i>Komenty</a>
                     </div>
                   </div>
                 </div>
@@ -67,6 +69,10 @@
           </div>
         </div>
       </div>
+      {{/each}}
+    {{else}}
+      <p>Loading...</p>
+    {{/if}}
     </div>
   </div>
 </template>

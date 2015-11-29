@@ -12,44 +12,45 @@
           <div class="form-group">
             <label class="col-sm-3 control-label">Vyber šport</label>
             <div class="col-sm-9">
-              <select class="form-control">
-                <option>Basketbal</option>
-                <option>Volejbal</option>
-                <option>Futbal</option>
+              <select class="form-control" name="sport">
+                <option>Vyberte šport</option>
+                <option value="Futbal">Futbal</option>
+                <option value="Basketbal">Basketbal</option>
+                <option value="Volejbal">Volejbal</option>
               </select>
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-3 control-label">Počet osôb</label>
             <div class="col-sm-9">
-              <input type="number" class="form-control">
+              <input type="number" class="form-control" name="pocet-osob">
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-3 control-label">Dátum konania</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="event-date">
+              <input type="text" class="form-control" name="event-date">
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-3 control-label">Začiatok udalosti</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="event-time">
+              <input type="text" class="form-control" name="event-time">
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-12">
-              <input type="text" class="form-control" placeholder="Názov udalosti">
+              <input type="text" class="form-control" name="nazov-udalosti" placeholder="Názov udalosti">
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-12">
-              <input type="text" class="form-control" placeholder="Miesto konania udalosti">
+              <input type="text" class="form-control" name="miesto-konania" id="address" placeholder="Miesto konania udalosti">
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-12">
-              <textarea class="form-control" rows="5" placeholder="Popis udalosti"></textarea>
+              <textarea class="form-control" rows="5" name="popis-udalosti" placeholder="Popis udalosti"></textarea>
             </div>
           </div>
           <div class="form-group">

@@ -23,6 +23,8 @@ ecmascript
 accounts-password
 alanning:roles
 zimme:active-route
+andrasph:clockpicker
+themeteorchef:jquery-validation
 cmather:handlebars-server@0.2.0
 dburles:collection-helpers
 reywood:publish-composite
