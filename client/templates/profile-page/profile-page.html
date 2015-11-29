@@ -1,58 +1,82 @@
 <template name="profilePage">
   <div class="ProfilePage">
     <div class="row">
-                <div class="col-md-4">
-                   <img src="img/250x250.png"  class="img-rounded img-responsive" />
-                    <br />
-                    <br />
-                    <div class="text-align">
-                    <p>Janko Hraško</p>
-                    <p>1.1.1991</p>
-                    <p>Sídlisko Ťahanovce </p>
-                    <p>email@email.com</p>
-                    <a href="#" class="btn btn-warning">Zmena údajov</a>
-                    </div>
+      <!-- PROFILE PIC -->
+      <div class="col-md-3">
+        <div class="divide-20"></div>
+        <div class="list-group">
+          <li class="list-group-item zero-padding">
+          <img alt="" class="img-responsive" src="img/250x250.png">
+          </li>
+          <div class="list-group-item profile-details">
+            <h2>Janko Hraško</h2>
+            <p><i class="fa fa-circle text-green"></i> Online</p>
+            <p>1.1.1991</p>
+            <p>Sídlisko Ťahanovce </p>
+            <p>email@email.com</p>
+            <p><a href="#" class="btn btn-warning">Zmena údajov</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- /PROFILE PIC -->
+      <!-- PROFILE DETAILS -->
+      <div class="col-md-9">
+        <!-- ROW 1 -->
+        <div class="row">
+          <div class="col-md-12 profile-details">
+            <h3>O mne</h3>
+            <p>Volám sa Janko Hraško bývam na ťahanovciach, mám rád basketbal, futbal bla bla, Hľadám parťákov na tieto športy a tak by som bol rád aj keď spoznám nových ľudí.. viete ako</p>
+          </div>
+        </div>
+        <!-- /ROW 1 -->
+        <div class="divide-20"></div>
+        <!-- ROW 2 -->
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Moje udalosti</h3>
+            <div class="scroller" data-height="250px" data-always-visible="1" data-rail-visible="1">
+              <div class="feed-activity clearfix">
+                <div class="row">
+                  <div class="col-xs-1">
+                    <img src="img/basket.png" height="50" width="50" sizeclass="img-rounded img-responsive"/>
+                  </div>
+                  <div class="col-xs-8">
+                    Basketbal
+                    <br>
+                    15.12.2015 16:00
+                    <br>
+                    Hala Cassosport
+                  </div>
+                  <div class="col-xs-3">
+                    <i class="fa fa-clock-o"></i>
+                    pridané pred 3 hodinami
+                  </div>
                 </div>
-                    <div class="col-md-8">
-                        <h3>O mne</h3>
-                        <div class="form-bottom" >
-                            <p>Volám sa Janko Hraško bývam na ťahanovciach, mám rád basketbal, futbal bla bla, Hľadám parťákov na tieto športy a tak by som bol rád aj keď spoznám nových ľudí.. viete ako</p>
-                        </div>
-                        <h3>Moje udalosti</h3>
-                        <div class="form-bottom" >
-                            <table style="width:100%" cellspacing="50">
-                              <tr>
-                               <td align="center" width="10%"><img src="img/basket.png" height="60" width="60" sizeclass="img-rounded img-responsive"/></td>
-                               <td><p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Basketbal</b></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;15.12.2015 16:00</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Hala Cassosport</p></td>
-                              </tr>
-                            </table>
-                            &nbsp;&nbsp;
-                            <table style="width:100%" cellspacing="50">
-                              <tr>
-                               <td align="center" width="10%"><img src="img/voli.png" height="60" width="60" sizeclass="img-rounded img-responsive"/></td>
-                               <td><p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Volejbal</b></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;24.12.2015 16:00</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Steel Arena</p></td>
-                              </tr>
-                            </table>
-                        </div>
-
-                       <h3>Priatelia</h3>
-                        <div class="form-bottom" >
-                             <a href="#">
-                                <i class="img-circle"><img src="img/avatar.png" class="img-rounded img-responsive"/></i>
-                            </a>
-                             <a href="#">
-                                <i class="img-circle"><img src="img/avatar.png" class="img-rounded img-responsive" /></i>
-                            </a>
-                             <a href="#">
-                                <i class="img-circle"><img src="img/avatar.png" class="img-rounded img-responsive" /></i>
-                            </a>
-
-                       </div>
-                   </div>
+              </div>
+              <div class="feed-activity clearfix">
+                <div class="row">
+                  <div class="col-xs-1">
+                    <img src="img/voli.png" height="50" width="50" sizeclass="img-rounded img-responsive"/>
+                  </div>
+                  <div class="col-xs-8">
+                    Volejbal
+                    <br>
+                    24.12.2015 16:00
+                    <br>
+                    Steel Arena
+                  </div>
+                  <div class="col-xs-3">
+                    <i class="fa fa-clock-o"></i>
+                    pridané pred 4 hodinami
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /ROW 2 -->
+      </div>
+      <!-- /PROFILE DETAILS -->
     </div>
   </div>
 </template>
