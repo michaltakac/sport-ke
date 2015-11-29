@@ -21,22 +21,28 @@
           </a>
         </li>
         <li>
+          <a href="#">
+          <i class="fa fa-gears fa-fw"></i> <span class="menu-text">Nastavenia</span>
+          </a>
+        </li>
+        {{#if currentUser}}
+        <li>
           <a href="/profil">
           <i class="fa fa-user fa-fw"></i> <span class="menu-text">Profil</span>
           </a>
         </li>
         <li>
-          <a href="#">
-          <i class="fa fa-gears fa-fw"></i> <span class="menu-text">Nastavenia</span>
-          </a>
-        </li>
-        <!--{{#if currentUser}}-->
-        <li>
           <a href="#" id="logout">
           <i class="fa fa-power-off fa-fw"></i> <span class="menu-text">Odhlásenie</span>
           </a>
         </li>
-        <!--{{/if}}-->
+        {{else}}
+        <li>
+          <a href="/prihlasenie">
+          <i class="fa fa-sign-in fa-fw"></i> <span class="menu-text">Prihlásenie</span>
+          </a>
+        </li>
+        {{/if}}
       </ul>
       <!-- /SIDEBAR MENU -->
     </div>

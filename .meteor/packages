@@ -26,6 +26,7 @@ zimme:active-route
 cmather:handlebars-server@0.2.0
 dburles:collection-helpers
 reywood:publish-composite
+softwarerero:accounts-t9n
 momentjs:moment
 underscorestring:underscore.string
 matb33:collection-hooks
@@ -40,6 +41,7 @@ kadira:blaze-layout
 kadira:flow-router
 useraccounts:bootstrap
 useraccounts:flow-routing
+peppelg:bootstrap-3-modal
 meteortoys:allthings@2.1.1
 dburles:google-maps
 rajit:bootstrap3-datepicker
